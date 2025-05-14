@@ -1,0 +1,254 @@
+/* *{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+} */
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+header{
+    width: 80%;
+    height: 95vh;
+    /* border: 1px solid #000; */
+    margin: auto;
+}
+header nav {
+    width:95%;
+    height: 7%;
+    /* border: 1px solid #000; */
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header nav ul{
+    list-style: none;
+    display: flex;
+}
+header nav ul li{
+    padding: 3px 15px;
+}
+header nav ul li:nth-last-child(1){
+   background: #000;
+   border-radius: 20px;
+   padding: 5px 20px;
+}
+header nav ul li:nth-last-child(1) a{
+    color: aliceblue;
+ }
+header nav ul a{
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    font-weight: 500;
+    transition: .3s linear;
+}
+header nav ul a:hover{
+    color: rgb(77, 193, 214);
+}
+header nav .bi-three-dots{
+    display: none;
+}
+header .content{
+    position: relative;
+    width: 100%;
+    height: 93%;
+    /* border: 1px solid #000; */
+}
+header .content::before{
+   content: '';
+   position: absolute;
+   width: 100%;
+   height: 80%;
+   /* border:1px  solid #000; */
+   background:url(background1.jpg)no-repeat center center/cover;
+   z-index: -1;
+
+}
+header .content .cont_bx{
+    width: 500px;
+    height: auto;
+    color: aliceblue;
+    padding: 30px;
+}
+header .content .cont_bx h1{
+    line-height: 40px;
+    font-weight: 800;
+    
+    /* border: 1px solid #000; */
+}
+header .content .cont_bx p{
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(241, 241, 241);
+}
+header .content .cont_bx button{
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    /* border: 2px solid #000; */
+    background: #000;
+    color:aliceblue;
+    outline: none;
+    cursor: pointer;
+    transition: .3s linear;
+}
+header .content .cont_bx button:hover{
+    background: rgb(177, 176, 176);
+    border: 2px solid rgb(177, 176, 176);
+}
+header .trip_bx{
+    position: relative;
+    width: 95%;
+    height: auto;
+    margin: auto;
+    /* border: 2px solid #000; */
+}
+header .trip_bx .search_bx{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow:0px 10px 25px rgb(114,114,114);
+    z-index: 1;
+    padding: 15px;
+}
+header .trip_bx .search_bx .card{
+    width: 200px;
+    height: 100%;
+    /* border: 1px solid #000; */
+}
+
+header .trip_bx .search_bx .card h4{
+    font-size: 15px;
+    margin: 0;
+    font-weight: 700;
+}
+header .trip_bx .search_bx .card h4 .bi{
+    position: absolute;
+    font-size: 13px;
+    margin:5px 0px 0px 5px;
+    transform: .3s linear;
+}
+header .trip_bx .search_bx .card input{
+    margin-top: 3px;
+    padding:5px 0px;
+    border: none;
+    outline: none;
+    font-size: 13px;
+}
+header .trip_bx .search_bx .card input{
+    margin-top: 3px;
+    padding:5px 0px;
+    border: none;
+    outline: none;
+    font-size: 13px;
+}
+header .trip_bx .search_bx  input[type="button"]{
+   background: #000;
+   color: #fff;
+   border: none;
+   outline: none;
+   padding: 10px 20px;
+   border-radius: 20px;
+   transition: .3s linear;
+   cursor: pointer;
+}
+header .trip_bx .search_bx  input[type="button"]:hover{
+    background: gray;
+}
+header .trip_bx .travel_bx{
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    top: 40px;
+    /* background:#000;  */
+    /* border: 1px solid black;  */
+    border-radius: 10px;
+    padding-bottom:20px;
+    box-shadow: 0px 20px 25px -10px rgb(165,165,165);
+
+}
+header .trip_bx .travel_bx::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background: rgb(241, 241, 241, .7);
+    backdrop-filter: blur(5px);
+    z-index: -1;
+}
+header .trip_bx .travel_bx h4{
+    margin: 0;
+    padding: 60px 0px 15px 1.7%;
+}
+header .trip_bx .travel_bx .cards{
+   width: 96%;
+   height: auto;
+   margin: 0 auto;
+   /* border: 1px solid #000;  */
+   display: flex;
+   align-items: center;
+   justify-content:space-between;
+}
+header .trip_bx .travel_bx .cards .card{
+    width: 220px;
+    height: 180px;
+    /* border: 1px solid #000;  */
+}
+header .trip_bx .travel_bx .cards .card h3{
+    margin: 0px 0p 10px 0px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+}
+header .trip_bx .travel_bx .cards .card h3 img{
+  width: 20px;
+  height: 20px;
+  margin-left: 5px; 
+}
+header .trip_bx .travel_bx .cards .card img{
+    width: 90%;
+    height: 50%;
+    margin-left: 5px; 
+}
+header .trip_bx .travel_bx .cards .card .btn_city{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 1px solid#000; */
+}
+header .trip_bx .travel_bx .cards .card .btn_city a{
+    text-decoration: none;
+    background: #000;
+    color: #fff;
+    border-radius: 20px;
+    padding: 6px 20px;
+    font-size: 11px;
+    transition: .3s linear;
+}
+header .trip_bx .travel_bx .cards .card .btn_city a:hover{
+    background:grey;
+
+}
+header .trip_bx .travel_bx .cards .card .btn_city h5{
+    font-size: 11px;
+    font-weight: 500;
+    margin: 0;
+    margin-top: 5px;
+    line-height: 15px;
+    
+}
+header .trip_bx .travel_bx .cards .card .btn_city h5 span{
+    font-size: 13px;
+    font-weight: 700;    
+}
