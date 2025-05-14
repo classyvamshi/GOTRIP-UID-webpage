@@ -1,0 +1,106 @@
+<html>
+    <style>
+        section {
+            padding: 2rem 9%;
+        }
+        .home {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-flow: column;
+            position: relative;
+            z-index: 0;
+        }
+        .home .content {
+            text-align: center;
+        }
+        .home .content h3 {
+            font-size: 2.5rem;
+            color: #ffffff;
+            text-transform: uppercase;
+            text-shadow: 0 .3rem .5rem rgba(0, 0, 0, 0.1);
+            margin-bottom: 1rem;
+        }
+        .home .content p {
+            font-size: 2.5rem;
+            color: #fff;
+            padding: .5rem 0;
+            margin-bottom: 1rem;
+        }
+        .home .content .btn {
+            font-size: 1.5rem;
+            padding: 20px;
+            border-radius: 50px;
+            background: rgb(224, 184, 111);
+            color: aliceblue;
+            outline: none;
+            cursor: pointer;
+            transition: .3s linear;
+        }
+        .home .content .btn:hover {
+            background: rgb(177, 176, 176);
+            border: 2px solid rgb(177, 176, 176);
+        }
+        .home .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            height: 100vh;
+            width: 100vw;
+            object-fit: cover;
+        }
+        .home .controls {
+            display: flex;
+            justify-content: center;
+            padding: 1rem;
+            border-radius: 5rem;
+            background: rgba(0, 0, 0, 0.7);
+            position: relative;
+            top: 10rem;
+        }
+        .home .controls .vid-btn {
+            height: 25px;
+            width: 25px;
+            display: inline-block;
+            border-radius: 50%;
+            background: #fff;
+            cursor: pointer;
+            margin: 0 10px;
+        }
+        .home .controls .vid-btn.active {
+            background: var(--orange);
+        }
+    </style>
+    <body>
+        <section class="home" id="home">
+            <div class="content">
+                <h3>Adventure is Worthwhile</h3>
+                <p>Discover new places with us, adventure awaits</p><br>
+                <a href="#" class="btn">Discover More</a>
+            </div>
+            <div class="controls">
+                <span class="vid-btn active" data-src="video.mp4"></span>
+                <span class="vid-btn" data-src="video2.mp4"></span>
+                <span class="vid-btn" data-src="video.mp4"></span>
+                <span class="vid-btn" data-src="video2.mp4"></span>
+                <span class="vid-btn" data-src="video.mp4"></span>
+            </div>
+            <div class="video-container">
+                <video src="video2.mp4" id="video-slider" loop autoplay muted></video>
+            </div>
+        </section>
+        <script>
+            let videoBtn = document.querySelectorAll('.vid-btn');
+            videoBtn.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    document.querySelector('.controls .active').classList.remove('active');
+                    btn.classList.add('active');
+                    let src = btn.getAttribute('data-src');
+                    document.querySelector('#video-slider').src = src;
+                });
+            });
+        </script>
+    </body>
+</html>

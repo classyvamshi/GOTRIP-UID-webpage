@@ -1,0 +1,129 @@
+<html>
+    <style>
+body{
+  padding:0;
+  margin:0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.vid-container{
+  position:relative;
+  height:100vh;
+  overflow:hidden;
+}
+.bgvid{
+  position:absolute;
+  left:0;
+  top:0;
+  width:100vw;
+}
+.inner-container{
+  width:400px;
+  height:400px;
+  position:absolute;
+  top:calc(50vh - 200px);
+  left:calc(50vw - 200px);
+  overflow:hidden;
+}
+.bgvid.inner{
+  top:calc(-50vh + 200px);
+  left:calc(-50vw + 200px);
+  filter: url("data:image/svg+xml;utf9,<svg%20version='1.1'%20xmlns='http://www.w3.org/2000/svg'><filter%20id='blur'><feGaussianBlur%20stdDeviation='10'%20/></filter></svg>#blur");
+  -webkit-filter:blur(10px);
+  -ms-filter: blur(10px);
+  -o-filter: blur(10px);
+  filter:blur(10px);
+}
+.box{
+  position:absolute;
+  height:100%;
+  width:100%;
+  font-family:Helvetica;
+  color:#fff;
+  background:rgba(0,0,0,0.13);
+  padding:30px 0px;
+  border-radius: 20px 20px 20px 20px;
+}
+.box h1{
+  text-align:center;
+  margin:30px 0;
+  font-size:50px;
+  font-family: 'Times New Roman', Times, serif;
+}
+.box input{
+  display:block;
+  width:300px;
+  margin:20px auto;
+  padding:15px;
+  background:rgba(0,0,0,0.2);
+  color:#fff;
+  border-radius:10px;
+}
+/* .box input:focus,.box input:active,.box button:focus,.box button:active{
+  outline:none;
+} */
+.box button{
+  background:#16d2ef;
+  border-radius:10px;
+  color:#fff;
+  padding:10px;
+  font-size:20px;
+  width:330px;
+  margin:20px auto;
+  display:block;
+  cursor:pointer;
+
+}
+.box button:active{
+  background:#27ae60;
+}
+.box p{
+  font-size:14px;
+  text-align:center;
+  
+}
+.box p span{
+  
+  cursor:pointer;
+  color:#c20e4a;
+  
+}
+
+    </style>
+    <body>  
+      <!-- <script>  
+        function validateemail()  
+        {  
+        /* var x=document.myform.email.value;  */
+        var password=document.myform.password.value; 
+        /* var atposition=x.indexOf("@");  
+        var dotposition=x.lastIndexOf("."); */  
+       /*  if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){  
+          alert("Please enter a valid e-mail address \n atpostion(@):"+atposition+"\n dotposition(.):"+dotposition);  
+          return false;  
+          }  */ 
+           if(password.length<6){
+            alert("password must be atleast 6 character long.");
+            return false;
+        }
+        }  
+        </script>  -->
+<div class="vid-container">
+    <video class="bgvid" autoplay="autoplay" muted="muted" preload="auto" loop>
+        <source src="video2.mp4" type="video/webm">
+    </video>
+    <div class="inner-container">
+      <video class="bgvid inner" autoplay="autoplay" muted="muted" preload="auto" loop>
+        <source src="video2.mp4" type="video/webm">
+      </video>
+      <div class="box">
+        <h1>Login</h1>
+        <!-- <form name="myform"  method="post" action="#" onsubmit="return validateemail();"> -->
+        <input type="email" name="email" placeholder="Email Id"/>
+        <input type="password" name="password" placeholder="Password"/>
+        <a href="index.html"><button>Login</button></a>
+        <p>Not a member? <span><a href="signup.html">Sign Up</a></span></p>
+      </div>
+    </div>
+  </div>
+</body>
+  </html>

@@ -1,0 +1,225 @@
+  /* Add the following CSS styles to your existing styles */
+
+  .section.about {
+    padding: 100px 0;
+    text-align: center;
+  }
+
+  .about-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .section-subtitle {
+    font-size: 18px;
+    color: #888;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .section-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 30px;
+  }
+
+  .about-text {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 40px;
+  }
+
+  .about-list {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+
+  .about-item {
+    width: 300px;
+    padding: 30px;
+    margin: 0 20px;
+    border-radius: 6px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+
+  .about-item:hover {
+    transform: translateY(-10px);
+  }
+
+  .about-item-icon {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 10px;
+    animation: rotate 2s linear infinite;
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .about-item-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    margin-bottom: 10px;
+  }
+
+  .about-item-text {
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+  }
+
+  .btn-primary {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 12px 30px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+  }
+
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+
+  .about-banner {
+    margin-top: 60px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .about-banner img {
+    width: 100%;
+    height: auto;
+    animation: slide 10s linear infinite;
+  }
+
+  @keyframes slide {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  /* Adjust the following styles for responsiveness */
+  
+  @media (max-width: 768px) {
+    .about-content {
+      padding: 0 20px;
+    }
+
+    .about-item {
+      width: 100%;
+      margin: 0 0 20px;
+    }
+  }
+  
+  /* Gradient Colors */
+  
+  .about-item:nth-child(1) {
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+  }
+
+  .about-item:nth-child(2) {
+    background: linear-gradient(45deg, #a64dff, #00dbde);
+  }
+
+  .about-item:nth-child(3) {
+    background: linear-gradient(45deg, #fc354c, #0abfbc);
+  }
+
+
+    /* Your existing styles */
+    
+    /* Floating Icons */
+    .floating-icons {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: -1;
+      }
+  
+      .floating-icons .icon {
+        position: absolute;
+        top: 0;
+        right: 0;
+        animation: float-rotate 30s linear infinite;
+      }
+  
+      @keyframes float-rotate {
+        0% {
+          transform: translateX(0) rotate(0);
+        }
+        100% {
+          transform: translateX(-2000%) translateY(2000%) rotate(100deg);
+        }
+      }
+  
+      .floating-icons .icon img {
+        width: 50px;
+        height: 50px;
+        opacity: 0.6;
+      }
+
+      .floating-icons .icon2 img {
+        width: 50px;
+        height: 50px;
+        opacity: 0.6;
+      }
+  
+      /* Additional Shooting Star Icons */
+      .floating-icons .shooting-star {
+        position: absolute;
+        top: 50%;
+        left: 0%;
+        animation: shooting-star 15s linear infinite;
+      }
+  
+      @keyframes shooting-star {
+        0% {
+          transform: translate(-50%, -50%) rotate(-45deg) scale(0);
+        }
+        10% {
+          transform: translate(-50%, -50%) rotate(-45deg) scale(1);
+        }
+        100% {
+          transform: translate(1500%, 1500%) rotate(-45deg) scale(0);
+        }
+      }
+  
+      .floating-icons .shooting-star img {
+        width: 30px;
+        height: 30px;
+        opacity: 0.8;
+      }
+      
+      /* Adjust the following styles for responsiveness */
+      
+      @media (max-width: 768px) {
+        .floating-icons .icon img {
+          width: 40px;
+          height: 40px;
+        }
+        .floating-icons .shooting-star img {
+          width: 20px;
+          height: 20px;
+        }
+      }
+  

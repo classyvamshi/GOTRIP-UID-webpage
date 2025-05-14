@@ -1,0 +1,369 @@
+/* *{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+} */
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+header{
+    width: 80%;
+    height: 95vh;
+    /* border: 1px solid #000; */
+    margin: auto;
+}
+navbar{
+    width: 80%;
+    height: 95vh;
+    /* border: 1px solid #000; */
+    margin: auto;
+}
+ nav {
+    width:95%;
+    height: 7%;
+    /* border: 1px solid #000; */
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+ nav ul{
+    list-style: none;
+    display: flex;
+}
+ nav ul li{
+    padding: 3px 15px;
+}
+ nav ul li:nth-last-child(1){
+   background: #000;
+   border-radius: 20px;
+   padding: 5px 20px;
+}
+ nav ul li:nth-last-child(1) a{
+    color: aliceblue;
+ }
+ nav ul a{
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    font-weight: 500;
+    transition: .3s linear;
+}
+ nav ul a:hover{
+    color: rgb(77, 193, 214);
+}
+ nav .bi-three-dots{
+    display: none;
+}
+header .content{
+    position: relative;
+    width: 100%;
+    height: 93%;
+    /* border: 1px solid #000; */
+}
+header .content::before{
+   content: '';
+   position: absolute;
+   width: 100%;
+   height: 80%;
+   /* border:1px  solid #000; */
+   background:url(gif2.gif)no-repeat center center/cover;
+   z-index: -1;
+
+}
+header .content .cont_bx{
+    width: 500px;
+    height: auto;
+    color: aliceblue;
+    padding: 30px;
+}
+header .content .cont_bx h1{
+    line-height: 40px;
+    font-weight: 800;
+    
+    /* border: 1px solid #000; */
+}
+header .content .cont_bx p{
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(241, 241, 241);
+}
+header .content .cont_bx button{
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    /* border: 2px solid #000; */
+    background: #000;
+    color:aliceblue;
+    outline: none;
+    cursor: pointer;
+    transition: .3s linear;
+}
+header .content .cont_bx button:hover{
+    background: rgb(177, 176, 176);
+    border: 2px solid rgb(177, 176, 176);
+}
+header .trip_bx{
+    position: relative;
+    width: 95%;
+    height: auto;
+    margin: auto;
+    /* border: 2px solid #000; */
+}
+header .trip_bx .search_bx{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow:0px 10px 25px rgb(114,114,114);
+    z-index: 1;
+    padding: 15px;
+}
+header .trip_bx .search_bx .card{
+    width: 200px;
+    height: 100%;
+    /* border: 1px solid #000; */
+}
+
+header .trip_bx .search_bx .card h4{
+    font-size: 15px;
+    margin: 0;
+    font-weight: 700;
+}
+header .trip_bx .search_bx .card h4 .bi{
+    position: absolute;
+    font-size: 13px;
+    margin:5px 0px 0px 5px;
+    transform: .3s linear;
+}
+header .trip_bx .search_bx .card input{
+    margin-top: 3px;
+    padding:5px 0px;
+    border: none;
+    outline: none;
+    font-size: 13px;
+}
+header .trip_bx .search_bx .card input{
+    margin-top: 3px;
+    padding:5px 0px;
+    border: none;
+    outline: none;
+    font-size: 13px;
+}
+header .trip_bx .search_bx  input[type="button"]{
+   background: #000;
+   color: #fff;
+   border: none;
+   outline: none;
+   padding: 10px 20px;
+   border-radius: 20px;
+   transition: .3s linear;
+   cursor: pointer;
+}
+header .trip_bx .search_bx  input[type="button"]:hover{
+    background: gray;
+}
+header .trip_bx .travel_bx{
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    top: 40px;
+    /* background:#000;  */
+    /* border: 1px solid black;  */
+    border-radius: 10px;
+    padding-bottom:20px;
+    box-shadow: 0px 20px 25px -10px rgb(165,165,165);
+
+}
+header .trip_bx .travel_bx::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background: rgb(241, 241, 241, .7);
+    backdrop-filter: blur(5px);
+    z-index: -1;
+}
+header .trip_bx .travel_bx h4{
+    margin: 0;
+    padding: 60px 0px 15px 1.7%;
+}
+header .trip_bx .travel_bx .cards{
+   width: 96%;
+   height: auto;
+   margin: 0 auto;
+   /* border: 1px solid #000;  */
+   display: flex;
+   align-items: center;
+   justify-content:space-between;
+}
+header .trip_bx .travel_bx .cards .card{
+    width: 220px;
+    height: 180px;
+    /* border: 1px solid #000;  */
+}
+header .trip_bx .travel_bx .cards .card h3{
+    margin: 0px 0p 10px 0px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+}
+header .trip_bx .travel_bx .cards .card h3 img{
+  width: 20px;
+  height: 20px;
+  margin-left: 5px; 
+}
+header .trip_bx .travel_bx .cards .card img{
+    width: 90%;
+    height: 50%;
+    margin-left: 5px; 
+}
+header .trip_bx .travel_bx .cards .card .btn_city{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 1px solid#000; */
+}
+header .trip_bx .travel_bx .cards .card .btn_city a{
+    text-decoration: none;
+    background: #000;
+    color: #fff;
+    border-radius: 20px;
+    padding: 6px 20px;
+    font-size: 11px;
+    transition: .3s linear;
+}
+header .trip_bx .travel_bx .cards .card .btn_city a:hover{
+    background:grey;
+
+}
+header .trip_bx .travel_bx .cards .card .btn_city h5{
+    font-size: 11px;
+    font-weight: 500;
+    margin: 0;
+    margin-top: 5px;
+    line-height: 15px;
+    
+}
+header .trip_bx .travel_bx .cards .card .btn_city h5 span{
+    font-size: 13px;
+    font-weight: 700;    
+}
+.offers{
+    width: 60%;
+    height: auto;
+    border: 1px solid #000;
+    margin: auto;
+    margin-top: 100px;
+}
+.offers h1{
+    font-weight: 500;
+    text-align: center;
+    margin: 0;
+}
+.offers .cards{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #000;
+}
+.offers .cards .card{
+    position: relative;
+    width: 200px;
+    height: 350px;
+    border: 1px solid #000;
+}
+   /* Add the scroll animation */
+   @keyframes scrollAnimation {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Apply the scroll animation to the cards */
+.cards .card {
+    animation: scrollAnimation 2.5s ease-in-out forwards;
+    animation-delay: calc(0.1s * var(--card-index));
+}
+@keyframes scrollAnimation {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Apply the scroll animation to the cards */
+.search_bx .card {
+    animation: scrollAnimation 1.5s ease-in-out backwards;
+    animation-delay: calc(0.1s * var(--card-index));
+}
+
+/*////////////////////////////////////////*/
+.container {
+    display: flex;
+    width: 90vw;
+  }
+  
+  .panel {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 50px;
+    color: #fff;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    -webkit-transition: all 700ms ease-in;
+  }
+  
+  .panel h3 {
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+  }
+  
+  .panel.active {
+    flex: 5;
+  }
+  
+  .panel.active h3 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+  }
+  
+  @media (max-width: 480px) {
+    .container {
+      width: 100vw;
+    }
+  
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5) {
+      display: none;
+    }
+  }
+  /*/////////////////////*/
+ 
